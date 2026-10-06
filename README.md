@@ -1,7 +1,7 @@
 # The code, chapter by chapter
 
 Each folder holds the Risiti app as it stands **at the end of** that chapter:
-`03/` after Chapter 3, `15/` after Chapter 15. Chapters 1 and 2 have no code
+`03/` after Chapter 3, `15/` after Chapter 15. Chapters 1, 2 and 16 have no code
 of their own.
 
 This is Part I's Risiti: the real app's screens, schema and components,
@@ -43,6 +43,8 @@ Mob 0.9.12:
 | 13 | 35 |
 | 14 | 40 |
 | 15 | 45 |
+| 17 | 59 (3 of them doctests) |
+| 18 | 88 (15 of them doctests) |
 
 `mix test` prints a warning that `mob_nif.so` can't be loaded. That's
 expected: the NIF is built for the phone, and the tests don't need it.
