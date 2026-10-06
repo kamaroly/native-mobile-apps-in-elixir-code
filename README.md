@@ -46,10 +46,12 @@ Mob 0.9.12:
 | 17 | 59 (3 of them doctests) |
 | 18 | 88 (15 of them doctests) |
 | 19 | 105 (15 of them doctests) |
+| 20 | 131 (17 of them doctests) |
 
 `mix test` prints a warning that `mob_nif.so` can't be loaded. That's
 expected: the NIF is built for the phone, and the tests don't need it.
 
 Chapter 14 adds the `mob_camera` plugin, Chapter 15 `mob_biometric` and
-Chapter 19 `mob_ocr` (in `plugins/`, copied with the rest), so deploy those
+Chapter 19 `mob_ocr` (in `plugins/`, copied with the rest), Chapter 20
+`mob_scanner`, so deploy those
 checkpoints with `--native` the first time.
