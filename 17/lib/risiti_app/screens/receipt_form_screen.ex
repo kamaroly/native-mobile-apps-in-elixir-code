@@ -256,6 +256,9 @@ defmodule RisitiApp.Screens.ReceiptFormScreen do
       {:ok, _saved} ->
         {:noreply, back_to_list(socket)}
 
+      {:error, :paid} ->
+        {:noreply, Native.toast(socket, "This one has been paid, so it can't change")}
+
       {:error, changeset} ->
         {:noreply, Mob.Socket.assign(socket, :errors, changeset_errors(changeset))}
     end

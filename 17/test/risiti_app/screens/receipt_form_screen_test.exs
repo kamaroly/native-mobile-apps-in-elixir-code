@@ -77,6 +77,21 @@ defmodule RisitiApp.Screens.ReceiptFormScreenTest do
     assert Transactions.get_transaction!(naivas.id).amount_cents == 350_000
   end
 
+  test "a paid transaction stays as it was paid" do
+    {:ok, approved} = Transactions.decide(insert_transaction(amount_cents: 345_050), "approved")
+    {:ok, paid} = Transactions.decide(approved, "paid")
+
+    view =
+      ReceiptFormScreen
+      |> mount_screen(%{id: paid.id})
+      |> fill_in(amount: "1")
+      |> render_info({:tap, :save})
+
+    assert navigated_to(view) == nil
+    assert_received {:native, :toast, ["This one has been paid, so it can't change"]}
+    assert Transactions.get_transaction!(paid.id).amount_cents == 345_050
+  end
+
   test "confirming the delete alert removes the receipt" do
     naivas = insert_transaction(vendor: "Naivas")
 
