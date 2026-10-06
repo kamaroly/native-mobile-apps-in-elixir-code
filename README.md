@@ -49,6 +49,7 @@ Mob 0.9.12:
 | 20 | 131 (17 of them doctests) |
 | 21 | 152 (21 of them doctests) |
 | 22 | 155 (21 of them doctests) |
+| 23 | 166 (22 of them doctests) |
 
 `mix test` prints a warning that `mob_nif.so` can't be loaded. That's
 expected: the NIF is built for the phone, and the tests don't need it.

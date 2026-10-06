@@ -1,0 +1,409 @@
+
+<html>
+<head>
+	<LINK rel=Stylesheet type=text/css href="/KRA-Portal/themes/styles/common/content.css">
+	<link rel="shortcut icon" type="image/ico" href="/KRA-Portal/themes/images/favicon.ico" >
+	<link rel="stylesheet" href="/KRA-Portal/themes/styles/common/newHomeTemplate_kra.css" type="text/css"/>
+	
+	<title> Kenya Revenue Authority</title>
+	
+	<script type="text/javascript">
+	function displayParentChild(link)
+	{
+		document.forms[0].action="main.htm?actionCode=displayChildMenus&&parentMenuId="+link+"&&menyType=HOMELINK";
+		document.forms[0].submit();
+	}
+	function showTCCChecker()
+	{
+
+		 document.forms[0].action="complianceMonitoring.htm?actionCode=validateTCC";
+	  
+		document.forms[0].submit();
+	}
+	function whtChecker()
+	{
+		  /*if(disableEServicesLinks=='Y')
+		  {
+			document.forms[0].action ="main.htm?actionCode=comingSoon&viewType=static";
+		  }
+		  else
+		  {
+			  document.forms[0].action="complianceMonitoring.htm?actionCode=showVerifyWithholdingCertificate&viewType=static";
+		  }*/
+		  document.forms[0].action="complianceMonitoring.htm?actionCode=showVerifyWithholdingCertificate";
+		  document.forms[0].submit();
+	}
+	function openFAQ()
+	{
+//		if(disableAdminManagedLinks=='Y')
+//		{
+//			document.forms[0].action ="main.htm?actionCode=comingSoon&viewType=static";
+//		}
+//		else
+//		{
+			document.forms[0].action="faq.htm?actionCode=faqManagement&operation=viewCategory&viewType=static";
+//		}
+		document.forms[0].submit();
+	}
+	function reportProblem()
+	{
+		/* document.forms[0].action ="postQuery.htm?actionCode=showPostQuery&viewType=static";
+		document.forms[0].submit(); */
+		window.open("https://kenya-revenue-authority.custhelp.com/app/ask/session/L3RpbWUvMTY3NjQ1NTY3Ny9nZW4vMTY3NjQ1NTY3Ny9zaWQvZlVpTUZHbHIwbEFTUVNhWU80QzRMek9IRk9ZZyU3RW85eTglN0V0bUdlZTZrQUhwVWhYUjdRdGFsaEdBcHZ4UjJLeGh2aVNvNTNaTzlhJTdFZmJ0aVo0JTdFa2xvUlo0bmI3eUdzVUdualJqMUJybnA2bTBZVnhGOHd2VXBwcWclMjElMjE=","_blank");
+	}
+	function checkVATWHTPIN()
+	{
+		document.forms[0].action ="pinChecker.htm?actionCode=loadVATWHTPage&viewType=static";	
+		document.forms[0].submit();
+	}
+	function pinchecker(){
+		  /*if(disableEServicesLinks=='Y')
+		  {
+			document.forms[0].action ="main.htm?actionCode=comingSoon&viewType=static";
+		  }
+		  else
+		  {
+			document.forms[0].action ="pinChecker.htm?actionCode=loadPage&viewType=static";
+		  }*/
+		document.forms[0].action ="pinChecker.htm?actionCode=loadPage&viewType=static";
+		document.forms[0].submit();
+		}
+	function contactUs()
+	{
+		document.forms[0].action="main.htm?actionCode=showContactUs&viewType=static&linkFrom=LP";
+		document.forms[0].submit();
+	}
+		
+	
+		var disableAdminManagedLinks = "Y";
+		var disableEServicesLinks = "Y";
+	</script>
+	<script type="text/javascript" src="/KRA-Portal/scripts/common/newHomeTemplate.js"></script>
+	
+	<script type="text/javascript" src="/KRA-Portal/scripts/common/commonValidationCombined.js"></script>
+	<script type="text/javascript" src="/KRA-Portal/scripts/common/eService_General.js"></script>
+	<script type='text/javascript' src="/KRA-Portal/dwr/engine.js"></script>
+	<script type='text/javascript' src="/KRA-Portal/dwr/util.js"></script>
+	<script>
+		dwr.engine.setPreHook(_showDynamicDiv);
+		dwr.engine.setPostHook(_hideDynamicDiv);
+	</script>
+</head>
+
+<body topmargin="0">
+	<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<script type="text/javascript" src="/KRA-Portal/scripts/common/common.js"></script>
+
+<center>
+<div id='statusbar'>
+<table class="img">
+<tr>
+<td id='imgtd'>
+<img src="/KRA-Portal/themes/images/pageLoader.gif" height="60px" width="60px" alt="image is not supported."></img>
+</td>
+<td id='statuBarTd1' class="showProgressBar"></td>
+</tr>
+</table>
+</div>
+</center>
+<div id="fadeBackground"  class="fade_background"></div>
+
+
+	
+	<div align="center" id="top-band-1">
+<table width="960px" height="100%" id="top-band-table-1"><tbody>
+<tr>
+<td class="textAlignLeft">Welcome to iTax Online Service Area
+</td>
+<td class="textAlignRight top-link"><A href="#" onclick="javascript:displayParentChild('Checkers');">Checkers</A>&nbsp;|&nbsp;<A href="#" onclick="javascript:openFAQ();">FAQs</A>&nbsp;|&nbsp;<A href="#" onclick="javascript:downloads();">Forms</A>&nbsp;|&nbsp;<A href="#" onclick="javascript:reportProblem();">Report Problem</A>&nbsp;|&nbsp;<a href="#" onclick="javascript:contactUs();">Contact us</a>&nbsp;|&nbsp;<A href="#" onclick="javascript:window.open('http://www.kra.go.ke/web-help/index.htm','_blank','directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,resizable=yes');">Online Help</A>&nbsp;|&nbsp;<A href="#" onclick="javascript:displayParentChild('ITAX Videos');">iTax Videos</A>
+</td>
+</tr></tbody>
+</table>
+</div>
+<!-- 	<a href="#" onclick="javascript:showHomePage();">Home</a>&nbsp;|&nbsp; -->
+
+	
+	<!-- Main DIV Started  -->
+	<div class="templateMainDiv" align="center">
+		<!-- Header DIV Started  --> 
+		<div class="templateHeaderDiv">
+			
+
+<!-- Header Image DIV Started -->
+<div class="mainHeaderDIV">
+	<table class="mainHeaderTable" id="header_TD" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<img usemap="#KRALogo" title="KRA" src="/KRA-Portal/themes/images/P1Head.jpg" height="122px">
+				
+				
+				<map name="KRALogo">
+	  				<area shape="rect" coords="62,26,300,118" href="main.htm?actionCode=showOnlineServicesHomeLnclick" />
+	  			</map>
+	  			
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- Header Image DIV ended -->
+
+		</div>
+		<!-- Header DIV Ended  -->
+		<!-- Menu DIV Started  -->
+		<div class="templateMenuDiv">
+			
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
+<html>
+<head>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>	
+		</div>
+		<!-- Menu DIV Ended  -->
+		<!-- Banner DIV Started  -->
+		
+		<!-- Banner DIV Ended  -->
+		<!-- Content DIV Started  -->
+		<div class="templateContentDiv" align="left">
+			<table class="templateContentDivTable">
+				<tr>
+					<td class="templateContentDivTableMainPanel">
+						<div class="templateContentDivTableMainPanelDiv">
+							
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+</head>
+<body onload="setViewType()">
+<!-- Bread Crumb starts -->
+
+<div class="textAlignLeft"><!-- Bread Crumb Alignment -->
+		<table>
+			<tr class="youAreHere"><!-- Bread Crumb css -->
+				
+ 
+
+
+
+
+<script type="text/javascript">
+function getBack()
+{
+   
+   
+   var siteMapJsp="";
+   var linkFrom="";
+   //alert('');
+   siteMapJsp='';
+   linkFrom='';
+   if(siteMapJsp!=null && siteMapJsp!="" && siteMapJsp=='siteMap')	 
+	   window.location.href ="/KRA-Portal/main.htm?actionCode=showSiteMap";	 
+   else if(linkFrom!=null && linkFrom!="" && linkFrom=='OS') //OS - Online Services Page
+	   window.location.href ="/KRA-Portal/main.htm?actionCode=showOnlineServices&viewType=static";
+   else if(linkFrom!=null && linkFrom!="" && linkFrom=='LP') //LP - Login Page
+	   window.location.href = "/KRA-Portal/main.htm?actionCode=loadOnlineServicesPage";
+   else	 
+	   getBackHome();
+}
+function getBackHome()
+{
+	
+	//alert('static');
+	var viewType='static';
+	if(viewType == "static")
+		window.location.href = "/KRA-Portal/main.htm?actionCode=showHomePageLnclick";
+	else
+		window.location.href = "/KRA-Portal/main.htm?actionCode=showOnlineServicesHomeLnclick";
+}
+</script>
+<!-- Bread Crumb - General Message/Link - starts -->
+<td>
+	&nbsp;&nbsp;<a href="#" onClick="javascript:getBackHome();"><img src="/KRA-Portal/themes/images/home.png" alt="Home"/></a>
+</td>
+
+<!-- Bread Crumb ends -->
+				<td>
+					Invoice Checker
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- Bread Crumb end -->
+	<br/>
+
+
+
+							
+							
+
+<div >	<!-- Content Table main div -->
+		<center> <!-- center main div content -->
+			<div class="divBorder"> <!-- Content Table Div for Border -->
+				<table class="tab3 whitepapartdBig"> <!-- Content Table with css -->
+					<tr>
+						<td class="tablerowhead" >
+							Invoice Checker
+						</td>
+					</tr>
+					<tr>
+					<td class="textAlignLeft">
+					<fieldset>
+				    <legend>
+					<strong>
+					Invoice Checker
+					</strong>
+					</legend>	
+					<table width="100%">
+				
+				<tr>
+				<td class="textAlignLeft" ><b>Control Unit Invoice Number</b></td>
+				<td class="textAlignleft" >0040807890002542148</td>
+				
+				<td class="textAlignLeft" ><b>Trader System Invoice No</b></td>
+				<td class="textAlignleft" >03602022760069</td>
+						
+				
+			</tr>
+			
+			<tr>
+				<td class="textAlignLeft" ><b>Invoice Date</b></td>
+				<td class="textAlignleft" >24/09/2026</td>
+				<td class="textAlignleft">
+				<b>Total Taxable Amount</b></td>
+				<td class="textAlignleft">1038.79</td>
+		
+			</tr>
+			
+			<tr>
+			
+			<td class="textAlignLeft" ><b>Total Tax Amount</b></td>
+		<c:choose>	
+			<c:when test= "false">
+				<td class="textAlignleft" ></td>			
+			</c:when>
+			<c:otherwise>
+			<td class="textAlignleft" >166</td>		
+			</c:otherwise>
+		</c:choose>	
+			<td class="textAlignLeft" ><b>Total Invoice Amount</b></td>
+		<c:choose>
+		<c:when test= "false">
+				<td class="textAlignleft" ></td>					
+		</c:when>
+		<c:otherwise>
+				<td class="textAlignleft" >1205</td>
+		</c:otherwise>
+		</c:choose>	
+			</tr>
+			
+	
+			<tr>
+												<td class="textAlignLeft">
+													<b>
+														Supplier Name
+													</b>
+												</td>
+												<td class="textAlignLeft" >QUICK MART LIMITED</td>
+											</tr>		
+								
+										</table>
+										</fieldset>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</center>
+				</div>
+<div>
+<center>
+	<input type="button" value="Home" id="back" class="submit" onclick="javascript:getBack();" />
+</center>
+</div>
+</body>
+</html>
+
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>	
+		<!-- Content DIV Ended  -->
+		<!-- Footer DIV Started  -->
+		<div class="templateFooterDiv">
+			<table class="templateFooterDivTable">
+				<tr>
+					<td class="templateFooterDivTableFooter">
+						
+
+
+
+
+<HTML>
+
+
+
+
+
+<body>
+<form name="frmFooter" method="post">
+
+
+<!-- Footer DIV Started-->
+   	
+ <div> <!-- Footer Main DIV-->
+   	<table width="100%"> <!-- Footer Content Table -->
+   		<tr>
+			<!-- TCSLogo and Message Part Started -->
+			<td class="textAlignCenter">
+				<div>
+					<table width="100%">
+						<tr>
+							<td class="textAlignCenter"><img title="KRA VISION 2030.jpg" src="/KRA-Portal/themes/images/KRA_VISION_2030.png" height="70"></td>
+							<td class="manageSite">Times Tower, Haile Selassie Avenue, <br/> P.O.Box 48240 - 00100 GPO Nairobi Tel: 020-310300, 020-281000 Fax: 341342 <br/><br/>Call Center details Tel:020-4999999,020-4998000 Cell:0711-099999 Email: 	callcentre@kra.go.ke<br/>
+									<font class="bestViewMsg">Site best viewed in 1024 X 768 resolution with IE 7.0 and above.&nbsp;&copy;2011-2026</font>
+							</td>
+							<td class="textAlignCenter manageSite">Powered By<br><img title="Kenya Revenue Authority" src="/KRA-Portal/themes/images/kra_logo.png" height="70"></td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+   	
+<!-- Footer DIV Ended-->
+
+
+</form>
+</body>
+<script type="text/javascript">
+	supressEnterKeySubmit();
+//	ddlevelsmenu.setup("ddtopmenubar", "topbar");
+</script>
+</HTML>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- Footer DIV Ended  -->
+	</div>
+	<!-- Main DIV Ended  -->
+	<script>
+		hideProgressbar();
+	</script>		
+</body>
+<script type="text/javascript">
+setRowOddEvenBackColor();
+setSelectObjAltText();
+setTextAreaObjLengthText();
+</script>
+</html>
