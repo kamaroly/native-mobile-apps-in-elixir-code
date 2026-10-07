@@ -1,0 +1,13 @@
+<Layouts.app flash={@flash}>
+  <.header>
+    Risiti
+    <:subtitle>
+      Your team's expenses, refunds and payment requests, approved in one place.
+    </:subtitle>
+  </.header>
+
+  <div class="flex flex-wrap gap-3">
+    <.link href={~p"/sign-in/phone"} class="btn btn-primary">Sign in with your phone number</.link>
+    <.link href={~p"/sign-in"} class="btn">Sign in with email</.link>
+  </div>
+</Layouts.app>
