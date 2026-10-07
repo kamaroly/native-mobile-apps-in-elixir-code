@@ -1,0 +1,354 @@
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    // Attach event listener to contextmenu event
+    $(document).on("contextmenu", function(e){
+        // Prevent default behavior
+        e.preventDefault();
+    });
+});
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>eTiMS</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		.cnt-wrap {
+			position: relative;
+			height: auto;
+			overflow: hidden;
+			padding: 5px;
+			font-size: 11px;
+		}
+
+		.btn-section {
+			width: 100%;
+			float: left;
+		}
+
+		.btn-btm {
+			display: inline-block;
+			text-align: center;
+			font-size: 12px;
+			width: 100%;
+			padding: 5px 0;
+			background: #0069a8;
+			border: 1px solid #3385b6;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.btn-btm.active, .btn-btm:hover {
+			background-color: #0069a8;
+			color: #fff;
+		}
+
+		.lt {
+			float: left;
+		}
+
+		.rt {
+			/* float: right; */
+			margin-left: 5px;
+		}
+
+		.totalsum {
+			font-weight: bold;
+		}
+
+		.topinfo {
+			font-size: 12px;
+			padding-bottom: 5px;
+		}
+
+		.topinfo .place {
+			font-weight: bold;
+		}
+
+		.topinfo:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.topinfo.detail {
+			font-weight: bold;
+		}
+
+		.tb-section {
+			margin-bottom: 30px;
+		}
+
+		.tb-section:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.hr-type01 {
+			border: none;
+			border-top: 1px dashed #999;
+		}
+
+		.hr-type02 {
+			border: none;
+			border-top: 1px dashed #999;
+			border-bottom: 1px dashed #999;
+			height: 2px;
+		}
+
+		.buylist-section {
+			margin-bottom: 20px;
+		}
+
+		.buylist-section:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.payed {
+			padding-left: 5px;
+			display: inline-block;
+		}
+
+		.payed.amount span {
+			margin-left: 5px;
+		}
+
+		.payed.per {
+			padding-right: 5px;
+		}
+
+		.payed.total {
+			clear: both;
+			width: 100%;
+		}
+
+		.payed.total span {
+			margin-left: 10px;
+		}
+
+		.total-detail:after, .total-detail div:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.total-detail .tit {
+			font-weight: bold;
+		}
+
+		.total-detail .value {
+			padding-right: 5px;
+		}
+
+		.insurance-co:after, .total-detail div:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.midtit {
+			/* text-align: center; */
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.total-detail.sdc .inblock {
+			display: inline-block;
+		}
+
+		.total-detail.sdc div:nth-child(3) {
+			clear: both;
+		}
+
+		.total-detail.sdc .inblock .tit {
+			width: 60px;
+		}
+
+		.total-detail.sdc .block-type {
+			padding: 2px 0;
+		}
+
+		.total-detail.sdc .block-type span {
+			display: block;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cnt-wrap">
+		<div class="topinfo detail">
+			<div>Stabex International Limited</div>
+			
+			
+
+			
+
+			<div>PIN : P051300254O</div>
+			<div>Invoice Number : KRACU0300010612/58385</div>
+			<br>
+			
+				<div>CLIENT PIN : A000000000Z</div>
+			
+				
+		</div>
+
+		<hr class="hr-type01">
+
+		
+
+		
+		<!-- list unit section -->
+		
+			
+				
+			
+			<div class="buylist-section">
+				<div class="tit">KE2OUL0000001 : UNLEADED</div>
+				<div class="payed amount lt">
+					211.02 <span>x 9.47</span> =
+				</div>
+				<div class="payed per rt">
+					1,998.45 (E-8%)
+				</div>
+				
+			</div>
+		
+		<!--/. list unit section -->
+
+		<hr class="hr-type01">
+
+		<div class="total-detail">
+			<div>
+				<span class="tit lt">TOTAL</span> :
+				<span class="value rt">1,998.45</span>
+			</div>
+			
+			<div>
+				<span class="tit lt">TOTAL AMOUNT A-Ex</span> :
+				<span class="value rt">0</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL AMOUNT B-16% </span> :
+				<span class="value rt">0</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL AMOUNT C-0%</span> :
+				<span class="value rt">0</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL AMOUNT E-8%</span> :
+				<span class="value rt">1,850.42</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL TAX-A-Ex</span> :
+				<span class="value rt">0</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL TAX-B-16%</span> :
+				<span class="value rt">0</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL TAX-C-0%</span> :
+				<span class="value rt">0</span>
+			</div>
+			<div>
+				<span class="tit lt">TOTAL TAX-E-8%</span> :
+				<span class="value rt">148.03</span>
+			</div>
+			
+			
+			
+			<div>
+				<span class="tit lt">TOTAL TAX</span> :
+				<span class="value rt">148.03</span>
+			</div>
+		</div>
+
+		
+
+		<hr class="hr-type01">
+		<div class="total-detail">
+			<div>
+				<span class="tit lt">CASH</span> :
+				<span class="value rt">1,998.45</span>
+			</div>
+		</div>
+		<hr class="hr-type01">
+		<div class="total-detail">
+			<div>
+				<span class="tit lt">ITEM NUMBER</span> :
+				<span class="value rt">1</span>
+			</div>
+		</div>
+		<hr class="hr-type01">
+
+		<div class="sdctit">SCU INFORMATION</div>
+		<div class="total-detail sdc">
+			<div class="block-type">
+				<span class="tit lt">Date :&nbsp;</span>
+				<span class="value lt">24/09/2026 08:20:54</span>
+			</div>
+			<div class="block-type">
+				<span class="tit lt">Control Unit Number :&nbsp;</span>
+				<span class="value lt">KRACU0300010612</span>
+			</div>
+			<div class="block-type">
+				<span class="tit lt" style="text-transform: uppercase;}">Invoice Number :&nbsp;</span>
+				<span class="value lt">KRACU0300010612/58385</span> 
+			</div>
+			<div class="block-type">
+				<span class="tit lt">Internal Data :&nbsp;</span>
+				<span class="value lt">XXWZ-2E44-LTWX-SYUH-2QZL-KQAZ-4A</span>
+			</div>
+			<div class="block-type">
+				<span class="tit lt">Receipt Signature :&nbsp;</span>
+				<span class="value lt">4CEE-YS4H-AXI3-XXPX</span>
+			</div>
+		</div>
+		<hr class="hr-type01">
+		<div class="total-detail sdc">
+			<div style="block-type">
+				<span class="tit lt">Receipt Number :&nbsp;</span>
+				<span class="value rt">58385</span>
+			</div>
+			
+		</div>
+		
+		
+		<hr class="hr-type01">
+		<div class="total-detail sdc">
+			<div style="block-type">
+				<span class="tit lt">End of Legal Receipt</span>
+			</div>
+		</div>
+		<hr class="hr-type02">
+	</div>
+</body>
+
+</html>
