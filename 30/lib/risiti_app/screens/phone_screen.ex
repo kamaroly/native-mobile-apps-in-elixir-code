@@ -63,7 +63,7 @@ defmodule RisitiApp.Screens.PhoneScreen do
         keyboard: :phone,
         error: @error
       )}
-      {ActionButton.button("send", if(@busy, do: "Sending code…", else: "Send code"), :send_code)}
+      {ActionButton.button("forward", if(@busy, do: "Sending code…", else: "Send code"), :send_code)}
       {google_button()}
     </Column>
     """
