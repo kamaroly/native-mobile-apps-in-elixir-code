@@ -49,15 +49,15 @@ Mob 0.9.12:
 | 20 | 131 (17 of them doctests) |
 | 21 | 152 (21 of them doctests) |
 | 22 | 155 (21 of them doctests) |
-| 23 | 166 (22 of them doctests) |
+| 23 | 167 (22 of them doctests) |
 
 `mix test` prints a warning that `mob_nif.so` can't be loaded. That's
 expected: the NIF is built for the phone, and the tests don't need it.
 
 Chapter 14 adds the `mob_camera` plugin, Chapter 15 `mob_biometric` and
 Chapter 19 `mob_ocr` (in `plugins/`, copied with the rest), Chapter 20
-`mob_scanner` and Chapter 22 `mob_google` (also in `plugins/`), so deploy those
-checkpoints with `--native` the first time.
+`mob_scanner`, Chapter 22 `mob_google` and Chapter 23 `mob_viewer` (also in
+`plugins/`), so deploy those checkpoints with `--native` the first time.
 
 ## Part V
 
@@ -67,7 +67,7 @@ checkpoints with `--native` the first time.
   Chapter 33 writes in full (R8 rules, splash, styles, adaptive icons);
   copy them over a generated project's `android/`, then make the
   `build.gradle`, manifest and `MainActivity.kt` edits the chapter shows.
-  177 tests and 26 doctests pass.
+  181 tests and 26 doctests pass.
 - **`34/`** is the server from `29/` made ready to deploy:
   `Risiti.Release.migrate_all/0`, `rel/overlays/bin/`, the production
   services in `config/runtime.exs`, and `deploy/` (script, systemd unit,

@@ -10,7 +10,7 @@ defmodule RisitiApp.Http do
     * host names resolve through the phone's resolver (`Mob.DNS.resolve/1`),
       because the BEAM's own lookup can fail on a real phone.
 
-  Only GET for now. Part IV adds request bodies, for the server's API.
+  Only GET for now. Chapter 30 adds request bodies, for our own server.
   """
 
   @timeout 20_000

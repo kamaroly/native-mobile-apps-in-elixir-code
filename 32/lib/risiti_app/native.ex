@@ -2,7 +2,7 @@ defmodule RisitiApp.Native do
   @moduledoc """
   The native calls screens make: the camera permission, the camera, the
   phone's gallery, the fingerprint check, reading receipts, the QR scanner,
-  KRA lookups, the browser, the file picker, Sign in with Google, syncing
+  KRA lookups, the browser, the file picker, the phone's file viewer, Sign in with Google, syncing
   with the server, device events, alerts, action sheets and toasts.
 
   They go straight to the phone's native layer, which does not exist under
@@ -92,13 +92,22 @@ defmodule RisitiApp.Native do
   def pick_files(socket),
     do: call(socket, :pick_files, [], &Mob.Files.pick(&1, types: [:images, :pdf]))
 
-  @doc "Opens a file from the app's storage in the phone's own viewer: a PDF reader, the gallery."
+  @doc """
+  Opens a file from the app's storage in the phone's own viewer: a PDF
+  reader, the gallery. Replies `{:viewer, :error, json}` only if it can't
+  (see `MobViewer`).
+  """
   def open_file(socket, path),
-    do:
-      call(socket, :open_file, [path], fn socket ->
-        Mob.Device.open_url(path)
-        socket
-      end)
+    do: call(socket, :open_file, [path], &MobViewer.view(&1, path, mime_type(path)))
+
+  defp mime_type(path) do
+    case path |> Path.extname() |> String.downcase() do
+      ".pdf" -> "application/pdf"
+      ".png" -> "image/png"
+      ext when ext in [".jpg", ".jpeg"] -> "image/jpeg"
+      _ -> "*/*"
+    end
+  end
 
   @doc """
   Shows the Google account chooser. Replies `{:google, :result, json}` or

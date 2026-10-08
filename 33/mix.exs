@@ -42,6 +42,8 @@ defmodule RisitiApp.MixProject do
       {:mob_notify, "~> 0.1"},
       # Our own plugin, in plugins/: Sign in with Google.
       {:mob_google, path: "plugins/mob_google"},
+      # Opens our files (the PDF report, attachments) in the phone's viewer.
+      {:mob_viewer, path: "plugins/mob_viewer"},
       # Code quality — Credo + ex_slop (catches AI-generated patterns
       # like blanket rescue, narrator docs, redundant Enum chains, etc).
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},

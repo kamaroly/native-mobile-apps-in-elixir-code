@@ -602,6 +602,10 @@ defmodule RisitiApp.Screens.ReceiptsScreen do
      |> Native.toast("Couldn't make the PDF. Check your phone has free space.")}
   end
 
+  # The PDF, or an attachment, had nowhere to open.
+  def handle_info({:viewer, :error, _json}, socket),
+    do: {:noreply, Native.toast(socket, "No app on this phone can open this file")}
+
   # ── Search ────────────────────────────────────────────────────────────────
 
   def handle_info({:tap, :toggle_search}, %{assigns: %{searching: true}} = socket) do
