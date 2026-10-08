@@ -58,3 +58,19 @@ Chapter 14 adds the `mob_camera` plugin, Chapter 15 `mob_biometric` and
 Chapter 19 `mob_ocr` (in `plugins/`, copied with the rest), Chapter 20
 `mob_scanner` and Chapter 22 `mob_google` (also in `plugins/`), so deploy those
 checkpoints with `--native` the first time.
+
+## Part V
+
+- **`33/`** is the phone app from `32/` made ready for release: `inets` in
+  `mix.exs`, the server named by `RISITI_API_URL` at build time, and
+  `scripts/release_apk.sh`. Its `android/` folder holds only the files
+  Chapter 33 writes in full (R8 rules, splash, styles, adaptive icons);
+  copy them over a generated project's `android/`, then make the
+  `build.gradle`, manifest and `MainActivity.kt` edits the chapter shows.
+  177 tests and 26 doctests pass.
+- **`34/`** is the server from `29/` made ready to deploy:
+  `Risiti.Release.migrate_all/0`, `rel/overlays/bin/`, the production
+  services in `config/runtime.exs`, and `deploy/` (script, systemd unit,
+  nginx, the secrets file's example) with `.github/workflows/deploy.yml`.
+  Its tests need Postgres, like `24/` to `29/`: 121 tests and 8 doctests
+  pass.

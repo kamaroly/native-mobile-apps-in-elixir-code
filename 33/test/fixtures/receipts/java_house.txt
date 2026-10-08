@@ -1,0 +1,14 @@
+WELCOME TO
+JAVA HOUSE
+Junction Mall, Ngong Rd
+Tel 0711 000 000
+Table 12  Guests 2
+2 Latte  700.00
+1 Chicken Wrap  950.00
+SUBTOTAL  1,650.00
+VAT 16%  227.59
+TOTAL ITEMS  3
+GRAND TOTAL KES  1,650.00
+M-PESA  1,650.00
+Served on 5 Sep 2026  13:05
+Thank you, come again

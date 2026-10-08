@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The window shows the splash (drawable/splash.xml) until the first
+         screen draws over it. -->
+    <style name="AppTheme" parent="android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

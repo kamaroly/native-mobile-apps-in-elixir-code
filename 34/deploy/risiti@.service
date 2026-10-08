@@ -1,0 +1,26 @@
+# deploy/risiti@.service: one Risiti instance per port.
+#
+#   sudo cp deploy/risiti@.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable risiti@4000 risiti@4001 risiti@4002
+[Unit]
+Description=Risiti on port %i
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+User=risiti
+Group=risiti
+EnvironmentFile=/etc/risiti/risiti.env
+Environment=PORT=%i
+Environment=PHX_SERVER=true
+Environment=RELEASE_NODE=risiti_%i
+WorkingDirectory=/opt/risiti/current
+ExecStart=/opt/risiti/current/bin/risiti start
+# systemctl stop and restart send SIGTERM: the BEAM shuts down cleanly,
+# finishing the requests it's serving.
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
