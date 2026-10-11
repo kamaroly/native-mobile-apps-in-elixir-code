@@ -1,16 +1,30 @@
-# The code, chapter by chapter
+# Native Mobile Apps in Elixir: the code
 
-Each folder holds the Risiti app as it stands **at the end of** that chapter:
-`03/` after Chapter 3, `15/` after Chapter 15. Chapters 1, 2 and 16 have no code
-of their own.
+The code for the book
+**[Native Mobile Apps in Elixir](https://leanpub.com/elixir-native-mobile-apps)**,
+chapter by chapter.
 
-This is Part I's Risiti: the real app's screens, schema and components,
-grown one chapter at a time. Parts II to V add the rest (receipt reading,
-claims, accounts, the server and sync) on top of `15/`.
+Each folder holds Risiti as it stands **at the end of** that chapter:
+`03/` after Chapter 3, `15/` after Chapter 15. Chapters 1, 2, 16 and 35
+have no code of their own.
 
-Only the files we write are here: `lib/`, `test/`, `priv/`, `config/`,
-`mix.exs`, `mob.exs` and `.formatter.exs`. The native `android/` folder is
-whatever `mix mob.new` generated for you and never changes in Part I.
+Clone it next to your own projects, as `code`, so the paths match the book:
+
+```
+git clone https://github.com/kamaroly/native-mobile-apps-in-elixir-code.git code
+```
+
+- **`03/` to `23/`** are the phone app, `risiti_app` (Parts I and II).
+- **`24/` to `29/`** are the server, `risiti`, a Phoenix and Ash app
+  (Part III).
+- **`30/` to `32/`** are the phone app again, joined to the server
+  (Part IV).
+- **`33/`** and **`34/`** are the phone app and the server made ready to
+  ship (Part V).
+
+For the phone app, only the files we write are here: `lib/`, `test/`,
+`priv/`, `config/`, `plugins/`, `mix.exs`, `mob.exs` and `.formatter.exs`.
+The native `android/` folder is whatever `mix mob.new` generated for you.
 
 ## Using a checkpoint
 
@@ -19,7 +33,7 @@ Generate a project once, then copy a checkpoint over it:
 ```
 mix archive.install hex mob_new
 mix mob.new risiti_app --android --blank
-cp -r path/to/book/code/08/. risiti_app/
+cp -r code/08/. risiti_app/
 cd risiti_app
 mix deps.get
 mix test
@@ -58,6 +72,17 @@ Chapter 14 adds the `mob_camera` plugin, Chapter 15 `mob_biometric` and
 Chapter 19 `mob_ocr` (in `plugins/`, copied with the rest), Chapter 20
 `mob_scanner`, Chapter 22 `mob_google` and Chapter 23 `mob_viewer` (also in
 `plugins/`), so deploy those checkpoints with `--native` the first time.
+
+## The server
+
+`24/` to `29/` and `34/` are complete Phoenix projects. Their tests need
+PostgreSQL:
+
+```
+cd code/29
+mix setup
+mix test
+```
 
 ## Part V
 

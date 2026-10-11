@@ -35,3 +35,6 @@ risiti-*.tar
 npm-debug.log
 /assets/node_modules/
 
+
+# Files uploaded in development.
+/priv/uploads/
