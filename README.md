@@ -99,3 +99,8 @@ mix test
   nginx, the secrets file's example) with `.github/workflows/deploy.yml`.
   Its tests need Postgres, like `24/` to `29/`: 121 tests and 8 doctests
   pass.
+
+## License
+
+The code is released under the [MIT License](LICENSE). The book itself is
+not: it is sold on [Leanpub](https://leanpub.com/elixir-native-mobile-apps).
